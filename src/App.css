@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+#root,html,body
+{
+    margin:0;
+    padding:0;
+    height:100vh;
+    box-sizing:border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    height:100%;
+    background :  url('./images/download.jpg') ;
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card{
+    background-color: rgb(239, 212, 208);
+    min-width:40%;
+    max-width:60%;
+    min-height:10%;
+    max-height: 30%;
+    display: flex;
+    border-radius: 20px;
+    padding: 2%;
+    box-shadow :  0 10px 10px rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y:auto;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading{
+    display: flex;
+    align-items: center;
+    height: 580px;
+    font-family: 'Nanum Pen Script';
+    font-size: 28px;                      /* Larger text */
+    /* font-family: 'Georgia', serif;        Different font */
+    font-weight: 400;
+  font-style: normal;                  /* Bold text */
+    color: #333;    
+    word-wrap: break-word;
+    text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button{
+    background-color:rgb(255, 198, 184);
+    border: 10px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+     font-family: 'Nanum Pen Script';
+      font-weight: 500;
+  font-style: normal;                  /* Bold text */
+    color: #333;
+    transition: background-color 0.3s ease;
 }
-
-.App-link {
-  color: #61dafb;
+.button:hover{
+background-color: rgb(248, 174, 156);
+transform: scale(1.05);
+box-shadow: 0 8px 15px rgba(232, 160, 160, 0.2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 600px) {
+    .card {
+        min-width: 60%;
+        max-width: 80%;
+        min-height: 30%;
+        max-height: 50%;
+    }
+    /* .heading {
+        font-size: 24px;
+    }
+    .button {
+        font-size: 14px; 
+    } */
 }
